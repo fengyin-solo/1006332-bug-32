@@ -1,0 +1,123 @@
+{
+  "comment": "既有能耗台账（存量）。迁移时按抄表日期先后排序：原编号沿用；早年没用水量的按补录口径处理；点位不在点位册的另起一行说明；编号冲突时最早抄表那份保留原号、后到的另起 ENER-LEGACY 编号并把旧值留作对照。",
+  "sourceLedger": "运维值班台账（2021-2026）",
+  "rows": [
+    {
+      "meterCode": "ENER-0001",
+      "pointCode": "P-01",
+      "period": "2021-05",
+      "readingDate": "2021-05-31",
+      "electricityKwh": 1820,
+      "waterTon": null,
+      "reader": "张师傅"
+    },
+    {
+      "meterCode": "ENER-0002",
+      "pointCode": "P-02",
+      "period": "2022-08",
+      "readingDate": "2022-08-31",
+      "electricityKwh": 2410,
+      "waterTon": null,
+      "reader": "张师傅"
+    },
+    {
+      "meterCode": "ENER-0003",
+      "pointCode": "P-01",
+      "period": "2023-01",
+      "readingDate": "2023-01-31",
+      "electricityKwh": 1980,
+      "waterTon": 46.2,
+      "reader": "李工"
+    },
+    {
+      "meterCode": "ENER-0002",
+      "pointCode": "P-07",
+      "period": "2023-03",
+      "readingDate": "2023-03-31",
+      "electricityKwh": 512,
+      "waterTon": 12.4,
+      "reader": "李工"
+    },
+    {
+      "meterCode": "ENER-0004",
+      "pointCode": "P-10",
+      "period": "2024-02",
+      "readingDate": "2024-02-29",
+      "electricityKwh": 760,
+      "waterTon": 9.1,
+      "reader": "外包抄表"
+    },
+    {
+      "meterCode": "ENER-0005",
+      "pointCode": "P-02",
+      "period": "2024-05",
+      "readingDate": "2024-06-02",
+      "electricityKwh": 2230,
+      "waterTon": 51.7,
+      "reader": "李工"
+    },
+    {
+      "meterCode": "ENER-0006",
+      "pointCode": "P-08",
+      "period": "2025-06",
+      "readingDate": "2025-06-30",
+      "electricityKwh": 3120,
+      "waterTon": 66.0,
+      "reader": "王姐"
+    },
+    {
+      "meterCode": "ENER-0007",
+      "pointCode": "P-03",
+      "period": "2025-11",
+      "readingDate": "2025-11-30",
+      "electricityKwh": 4105,
+      "waterTon": null,
+      "reader": "王姐"
+    },
+    {
+      "meterCode": "ENER-0008",
+      "pointCode": "P-04",
+      "period": "2026-02",
+      "readingDate": "2026-02-28",
+      "electricityKwh": 3876,
+      "waterTon": null,
+      "reader": "王姐"
+    },
+    {
+      "meterCode": "ENER-0009",
+      "pointCode": "P-01",
+      "period": "2026-09",
+      "readingDate": "2026-09-30",
+      "electricityKwh": 2050,
+      "waterTon": 48.9,
+      "reader": "王姐"
+    },
+    {
+      "meterCode": "ENER-0010",
+      "pointCode": "P-02",
+      "period": "2026-09",
+      "readingDate": "2026-09-30",
+      "electricityKwh": 2395,
+      "waterTon": 52.3,
+      "reader": "王姐"
+    },
+    {
+      "meterCode": "ENER-0011",
+      "pointCode": "P-05",
+      "period": "2026-09",
+      "readingDate": "2026-09-30",
+      "electricityKwh": 1760,
+      "waterTon": 30.5,
+      "reader": "二处赵工"
+    },
+    {
+      "meterCode": "ENER-0012",
+      "pointCode": "P-06",
+      "period": "2026-09",
+      "readingDate": "2026-09-30",
+      "electricityKwh": 1688,
+      "waterTon": 28.7,
+      "reader": "二处赵工"
+    }
+  ]
+}

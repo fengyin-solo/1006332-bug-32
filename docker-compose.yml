@@ -1,5 +1,14 @@
 services:
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: utility-tunnel-frontend:pinned
     ports:
-      - "5173:5173"
+      # 与镜像内 vite preview 严格对齐（--strictPort），避免端口漂移导致“线上对不上”。
+      - "4173:4173"
+    environment:
+      # 账期归账时区固化在代码里；这里仅声明，容器默认 UTC 也不影响账期。
+      TZ: Asia/Shanghai
+      # 只有环境差异（当前岗位/单位）允许经配置注入；不注入即用固化默认值，与本地一致。
+      VITE_OPERATOR_UNIT_CODE: "UNIT-A"

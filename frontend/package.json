@@ -4,22 +4,31 @@
   "version": "1.0.0",
   "type": "module",
   "repoKind": "frontend-only",
+  "engines": {
+    "node": ">=20.19.0 <21",
+    "npm": ">=10"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "energy:check": "node scripts/energy-selfcheck.mjs",
+    "energy:migrate": "node scripts/energy-migrate.mjs",
+    "energy:reconcile": "node scripts/energy-reconcile.mjs",
+    "energy:test": "node --test scripts/energy-rules.test.mjs",
+    "energy:verify": "npm run energy:migrate && npm run energy:check && npm run energy:reconcile && npm run energy:test"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "pinia": "2.3.1",
+    "vue": "3.5.43",
+    "vue-router": "4.6.4"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
-    "@vitejs/plugin-vue": "^5.0.4",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.6",
-    "vue-tsc": "^2.0.7"
+    "@types/node": "20.19.43",
+    "@vitejs/plugin-vue": "5.2.4",
+    "typescript": "5.9.3",
+    "vite": "5.4.21",
+    "vue-tsc": "2.2.12"
   }
 }

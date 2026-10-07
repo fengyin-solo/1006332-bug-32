@@ -18,6 +18,27 @@
       </article>
     </div>
 
+    <div class="panel">
+      <h3>能耗对账待办（与廊内能耗计量对账结论同一条流水线）</h3>
+      <p class="sub">
+        对账结论待办 <strong>{{ energyTodos.length }}</strong> 条 ＝ 本值班台账待核销
+        <strong>{{ energyTodos.length }}</strong> 条；编号、类型、点位逐条一致。
+      </p>
+      <table class="plain-table">
+        <thead><tr><th style="width:110px">待办编号</th><th style="width:150px">类型</th><th style="width:180px">计量编号/点位</th><th style="width:90px">来源</th><th>处置缘由</th><th style="width:90px">状态</th></tr></thead>
+        <tbody>
+          <tr v-for="todo in energyTodos" :key="todo.todoCode">
+            <td>{{ todo.todoCode }}</td>
+            <td>{{ todo.typeLabel }}</td>
+            <td>{{ todo.meterCode }} / {{ todo.pointCode }}</td>
+            <td>{{ todo.source }}</td>
+            <td>{{ todo.reason }}</td>
+            <td>{{ todo.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <p class="status-legend">
       <span v-for="item in statusSummary" :key="item.status" class="legend-item">
         {{ item.status }}：{{ item.count }}
@@ -79,13 +100,15 @@ import {
   moduleMeta,
   runAction as applyAction,
 } from '@/api/local-service'
+import { getEnergyState } from '@/energy/energy-service'
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('duty')
 const columns = ["交接编号", "值班班组", "值班日期", "班次", "值班人员", "交接事项", "交接人员", "交接状态"]
 const actions = ["发起交接", "确认交接", "登记遗留"]
 const statuses = ["待交接", "交接中", "已交接", "有遗留"]
-const stats = [{"label": "待交接班次", "value": 0}, {"label": "已交接班次", "value": 0}, {"label": "有遗留事项", "value": 0}]
+
+const energyTodos = getEnergyState().todos
 
 const rows = ref<EntryRow[]>([])
 const total = ref(0)
@@ -98,6 +121,12 @@ const statusSummary = computed(() =>
     count: rows.value.filter((row) => String(row.status) === status).length,
   })),
 )
+const stats = computed(() => [
+  { label: "待交接班次", value: rows.value.filter((r) => String(r.status) === "待交接").length },
+  { label: "已交接班次", value: rows.value.filter((r) => String(r.status) === "已交接").length },
+  { label: "有遗留事项", value: rows.value.filter((r) => String(r.status) === "有遗留").length },
+  { label: "能耗对账待办", value: energyTodos.length },
+])
 
 function resetFilters() {
   filters.value = {}

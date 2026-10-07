@@ -1,0 +1,52 @@
+{
+  "comment": "运维值班台账里的能耗对账待办。对账结论产生的待办条数必须与本台账待核销条数一致（同一条 RECON 编号一一对应），多一条少一条都算流水线漂移。",
+  "ledger": "运维值班台账",
+  "period": "2026-10",
+  "openReconciliationTodos": [
+    {
+      "todoCode": "RECON-001",
+      "category": "能耗对账",
+      "typeLabel": "计量编号冲突",
+      "refMeterCode": "ENER-LEGACY-001",
+      "refPointCode": "P-07",
+      "createdFrom": "存量迁移",
+      "status": "待核销"
+    },
+    {
+      "todoCode": "RECON-002",
+      "category": "能耗对账",
+      "typeLabel": "依赖缺失",
+      "refMeterCode": "ENER-UNREG-001",
+      "refPointCode": "P-10",
+      "createdFrom": "存量迁移",
+      "status": "待核销"
+    },
+    {
+      "todoCode": "RECON-003",
+      "category": "能耗对账",
+      "typeLabel": "统计周期与抄表日期矛盾",
+      "refMeterCode": "ENER-0005",
+      "refPointCode": "P-02",
+      "createdFrom": "存量迁移",
+      "status": "待核销"
+    },
+    {
+      "todoCode": "RECON-004",
+      "category": "能耗对账",
+      "typeLabel": "依赖缺失",
+      "refMeterCode": "ENER-0107",
+      "refPointCode": "P-99",
+      "createdFrom": "抄表录入",
+      "status": "待核销"
+    },
+    {
+      "todoCode": "RECON-005",
+      "category": "能耗对账",
+      "typeLabel": "统计周期与抄表日期矛盾",
+      "refMeterCode": "ENER-0108",
+      "refPointCode": "P-02",
+      "createdFrom": "抄表录入",
+      "status": "待核销"
+    }
+  ]
+}

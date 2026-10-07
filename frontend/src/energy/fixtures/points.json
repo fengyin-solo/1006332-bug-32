@@ -1,0 +1,77 @@
+{
+  "comment": "廊内能耗计量点位册（唯一的点位依赖来源）。计量读数必须能在这里找到点位，否则记一条「依赖缺失」。同一份文件本地与容器共用。",
+  "points": [
+    {
+      "pointCode": "P-01",
+      "pointName": "综合舱·1号配电间",
+      "section": "综合舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": "2023-01-01"
+    },
+    {
+      "pointCode": "P-02",
+      "pointName": "综合舱·2号配电间",
+      "section": "综合舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": "2023-01-01"
+    },
+    {
+      "pointCode": "P-03",
+      "pointName": "电力舱·北端计量点",
+      "section": "电力舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": null
+    },
+    {
+      "pointCode": "P-04",
+      "pointName": "电力舱·南端计量点",
+      "section": "电力舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": null
+    },
+    {
+      "pointCode": "P-05",
+      "pointName": "燃气舱·监控分站",
+      "section": "燃气舱",
+      "ownerUnitCode": "UNIT-B",
+      "ownerUnit": "运维二处",
+      "responsiblePost": "二处能耗计量岗",
+      "waterMeterInstalledFrom": "2023-01-01"
+    },
+    {
+      "pointCode": "P-06",
+      "pointName": "热力舱·监控分站",
+      "section": "热力舱",
+      "ownerUnitCode": "UNIT-B",
+      "ownerUnit": "运维二处",
+      "responsiblePost": "二处能耗计量岗",
+      "waterMeterInstalledFrom": "2023-01-01"
+    },
+    {
+      "pointCode": "P-07",
+      "pointName": "综合舱·集水坑水泵",
+      "section": "综合舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": "2024-06-01"
+    },
+    {
+      "pointCode": "P-08",
+      "pointName": "舱外·照明总表",
+      "section": "综合舱",
+      "ownerUnitCode": "UNIT-A",
+      "ownerUnit": "运维一处",
+      "responsiblePost": "能耗计量岗",
+      "waterMeterInstalledFrom": "2023-01-01"
+    }
+  ]
+}

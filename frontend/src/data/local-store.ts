@@ -2,7 +2,9 @@ import { SEED_ROWS } from './seed'
 import type { EntryRow } from './types'
 
 // 本地持久化：数据放在 localStorage 里，刷新、关掉再打开都还在。
-const STORAGE_KEY = 'urban-utility-tunnel:entries'
+// key 带版本：能耗计量固化为流水线口径后，旧缓存（3 条样例、待抄表点位缺失）必须作废，
+// 否则线上会一直读到合并进来的旧 energy 数据。换版本即让所有人回到固化样例。
+const STORAGE_KEY = 'urban-utility-tunnel:entries:v2'
 
 function clone<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T

@@ -1,0 +1,102 @@
+{
+  "comment": "2026-10 账期抄表录入批次。落库前逐条校验：同编号重复录入只认第一次，后到整条退回（另一种取值只留作对照）；跨单位提交一律拒绝；点位依赖缺失、统计周期与抄表日期矛盾的，落为「数据异常」并产生对账待办。",
+  "period": "2026-10",
+  "submittedBy": {
+    "name": "值班管理员",
+    "post": "能耗计量岗",
+    "unit": "运维一处",
+    "unitCode": "UNIT-A"
+  },
+  "rows": [
+    {
+      "submissionSeq": 1,
+      "meterCode": "ENER-0101",
+      "pointCode": "P-01",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 2110,
+      "waterTon": 49.6,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 2,
+      "meterCode": "ENER-0102",
+      "pointCode": "P-02",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 2440,
+      "waterTon": 53.0,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 3,
+      "meterCode": "ENER-0103",
+      "pointCode": "P-03",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 4220,
+      "waterTon": null,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 4,
+      "meterCode": "ENER-0104",
+      "pointCode": "P-04",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 3988,
+      "waterTon": null,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 5,
+      "meterCode": "ENER-0105",
+      "pointCode": "P-07",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 568,
+      "waterTon": 14.2,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 6,
+      "meterCode": "ENER-0107",
+      "pointCode": "P-99",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 660,
+      "waterTon": 7.8,
+      "reader": "外包抄表"
+    },
+    {
+      "submissionSeq": 7,
+      "meterCode": "ENER-0101",
+      "pointCode": "P-01",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 2130,
+      "waterTon": 50.1,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 8,
+      "meterCode": "ENER-0108",
+      "pointCode": "P-02",
+      "period": "2026-10",
+      "readingDate": "2026-11-01",
+      "electricityKwh": 2451,
+      "waterTon": 53.4,
+      "reader": "王姐"
+    },
+    {
+      "submissionSeq": 9,
+      "meterCode": "ENER-0109",
+      "pointCode": "P-05",
+      "period": "2026-10",
+      "readingDate": "2026-10-31",
+      "electricityKwh": 1812,
+      "waterTon": 31.2,
+      "reader": "王姐"
+    }
+  ]
+}

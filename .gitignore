@@ -85,3 +85,6 @@ desktop.ini
 *.db
 *.pid
 *.seed
+
+# ===== 能耗流水线产物（构建时在本地/镜像内重新生成，不入库） =====
+frontend/reports/
